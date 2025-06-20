@@ -13,7 +13,9 @@ async def random_subprocess():
         random_res = random.choice([True, False])
         if random_res:
             process = subprocess.Popen(
-                "cmd", creationflags=CREATE_NEW_CONSOLE, stdin=PIPE
+                random.choice["cmd", "powershell.exe"],
+                creationflags=CREATE_NEW_CONSOLE,
+                stdin=PIPE,
             )
             process.communicate("exit\n")
         return True
